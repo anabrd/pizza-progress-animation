@@ -1,0 +1,194 @@
+body {
+    font-family: 'Roboto',
+    sans-serif;
+    background-image: linear-gradient(rgb(247, 220, 224), white);
+    text-align: center;
+    color: navy;
+    height: 100vh;
+    padding: 2%;
+}
+
+h1 {
+    font-family: 'Poppins';
+    font-size: 3rem;
+    margin-bottom: 5%;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 50px;
+}
+
+input[type=text] {
+    margin: auto;
+    font-size: 2rem;
+    padding: 15px;
+    border: none;
+    border-radius: 15px;
+    height: 45px;
+}
+
+input[type=text]:focus {
+    outline: none;
+        border: salmon 3px solid;
+    transition: 0.1s;
+
+}
+
+input[type=submit] {
+    display: block;
+    margin: 30px auto;
+    padding: 15px;
+    border-radius: 15px;
+    border: none;
+    font-family: 'Poppins';
+    font-size: 1.5rem;
+    color: white;
+    background-color: navy;
+    transition: 0.5s;
+    opacity: 0.8;
+}
+
+input[type=submit]:hover {
+    opacity: 1;
+}
+
+div {
+    width: 20vw;
+    position: absolute;
+    right: 0;
+    top: 200px;
+    visibility: hidden;
+}
+
+.step1, .step2, .step3, .step4, .step5 {
+        animation: fademove1 5s linear;
+        animation-fill-mode: forwards;
+}
+
+img {
+    width: 100%;
+}
+
+
+.step2 {
+    animation-delay: 5s;
+}
+
+.step3 {
+    animation-delay: 10s;
+}
+
+.step4 {
+    animation-delay: 15s;
+}
+
+.step5 {
+    animation-delay: 20s;
+}
+
+.step6 {
+    animation: stopmid 5s linear;
+    animation-delay: 25s;
+    animation-fill-mode: forwards;
+}
+
+
+.pizza1, .pizza2, .pizza3, .pizza4, .pizza5 {
+    animation: rotate 5s steps(5) infinite;
+}
+
+.pizza6 {
+    animation-delay: 30s;
+    animation: bounce 2s linear infinite;
+}
+
+@keyframes fademove1 {
+    0% {
+        visibility: visible;
+        transform: translateX(-5vw);
+        opacity: 0.2;
+    }
+
+    25% {
+        transform: translateX(-25vw);
+        opacity: 0.5;
+    }
+
+    50% {
+        transform: translateX(-45vw);
+        opacity: 1;
+    }
+
+    75% {
+        transform: translateX(-65vw);
+        opacity: 0.5;
+    }
+
+    100% {
+        transform: translateX(-85vw);
+        opacity: 0.2;
+        visibility: hidden;
+    }
+}
+
+
+@keyframes stopmid {
+
+    0% {
+        visibility: visible;
+        transform: translateX(-5vw);
+        opacity: 0.2;
+    }
+
+    50% {
+        transform: translateX(-25vw);
+        opacity: 0.5;
+    }
+
+
+    100% {
+        transform: translateX(-40vw);
+        opacity: 1;
+        visibility: visible;
+    }
+
+}
+
+
+@keyframes rotate {
+    0% {
+        transform: rotateZ(0deg);
+    }
+
+    25% {
+        transform: rotateZ(60deg);
+    }
+
+    50% {
+        transform: rotateZ(120deg);
+    }
+
+    75% {
+        transform: rotateZ(180deg);
+    }
+
+    100% {
+        transform: rotateZ(240deg);
+    }
+
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(2vh);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
